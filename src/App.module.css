@@ -1,0 +1,8 @@
+.grid {
+  display: grid;
+}
+
+.grid__3-cols {
+  grid-template-columns: 20fr 60fr 20fr;
+  column-gap: 3.2rem;
+}

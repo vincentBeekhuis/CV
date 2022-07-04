@@ -1,0 +1,11 @@
+.side-nav {
+  list-style: none;
+  /* display: flex;
+  flex-direction: column; */
+}
+
+.side-nav-bar {
+  background-color: #d3d3d3;
+  padding-top: 6rem;
+  /* background-color: orangered; */
+}
