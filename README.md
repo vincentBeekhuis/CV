@@ -1,3 +1,8 @@
+# TODO
+
+- Blokjes met Ervaring / Educatie etc. openklapbaar maken en standaard dichtgeklapt
+- Side nav met auto scroll to view
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

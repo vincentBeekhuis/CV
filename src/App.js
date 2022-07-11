@@ -1,16 +1,32 @@
 import React from "react";
 
 import Container from "./Components/UI/Container";
+// import SideNav from "./Components/Nav/SideNav";
+import Header from "./Components/Header/Header";
+
+// import styles from "./App.module.css";
+import WerkErvaring from "./Components/WerkErvaring/WerkErvaring";
+import Educatie from "./Components/Educatie/Educatie";
 import SideNav from "./Components/Nav/SideNav";
 
-import styles from "./App.module.css";
-
 function App() {
+  const onNavClickHandler = (e) => {
+    console.log(e.target.getAttribute("data-name"));
+  };
+
   return (
-    <div className={`${styles.grid} ${styles["grid__3-cols"]}`}>
-      <SideNav />
-      <Container>Test</Container>
-    </div>
+    <>
+      <Container>
+        <Header />
+        <SideNav onClick={onNavClickHandler} />
+      </Container>
+      <Container>
+        <WerkErvaring />
+      </Container>
+      <Container>
+        <Educatie />
+      </Container>
+    </>
   );
 }
 

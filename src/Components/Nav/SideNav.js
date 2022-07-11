@@ -8,11 +8,18 @@ const SideNav = (props) => {
       <div className={styles["side-nav-bar"]}>
         {/* <button>X</button> */}
         <ul className={styles["side-nav"]}>
-          <NavItem> > Introduction</NavItem>
-          <NavItem> > Education</NavItem>
-          <NavItem> > Work Experience</NavItem>
-          <NavItem> > Skills</NavItem>
-          <NavItem> > Contact</NavItem>
+          <NavItem name="introductie" onClick={props.onClick}>
+            &gt; Introductie
+          </NavItem>
+          <NavItem name="ervaring" onClick={props.onClick}>
+            &gt; Werk Ervaring
+          </NavItem>
+          <NavItem name="educatie" onClick={props.onClick}>
+            &gt; Educatie
+          </NavItem>
+          <NavItem name="skills" onClick={props.onClick}>
+            &gt; Skills
+          </NavItem>
         </ul>
       </div>
     </>

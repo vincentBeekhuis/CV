@@ -1,0 +1,64 @@
+.container {
+  /* display: flex; */
+  display: grid;
+  grid-template-columns: 1fr 10fr;
+  column-gap: 2rem;
+
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+}
+
+.flex-container {
+  display: flex;
+  gap: 2rem;
+}
+
+.container:last-child {
+  border-bottom: none;
+}
+
+.heading-secondary {
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.heading-tertiary {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.heading-quaternary {
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 20px;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.logo {
+  width: 10rem;
+}
+
+.content {
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 19px;
+  transition: all 2s;
+  grid-column: 2;
+}
+.open-content {
+  cursor: pointer;
+  color: #0645ad;
+}
+
+ion-icon {
+  font-size: 2.4rem;
+  /* color: red; */
+
+  align-self: center;
+  cursor: pointer;
+}
