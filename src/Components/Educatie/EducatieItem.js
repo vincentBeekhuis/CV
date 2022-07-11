@@ -9,9 +9,6 @@ const EducatieItem = (props) => {
     onderwijsInstelling,
     plaats,
     opleiding,
-    afronding,
-    // functieTitel,
-    // functieOmschrijving,
   } = props.opleiding;
 
   const startDatumString = startDatum.toLocaleString("nl-NL", {

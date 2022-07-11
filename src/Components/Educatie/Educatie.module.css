@@ -7,5 +7,15 @@
   font-weight: 600;
   line-height: 25px;
   color: rgba(0, 0, 0, 0.9);
-  margin-bottom: 2rem;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.open-icon {
+  font-size: 3.2rem;
+  pointer-events: none;
+  color: rgba(0, 0, 0, 0.9);
 }

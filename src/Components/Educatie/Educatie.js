@@ -1,8 +1,13 @@
+import React, { forwardRef, useState } from "react";
+import { IonIcon } from "@ionic/react";
+import { addOutline, removeOutline } from "ionicons/icons";
+
 import styles from "./Educatie.module.css";
 import EducatieItem from "./EducatieItem";
 
 import logoWindesheim from "../../Img/logoWindesheim.png";
 import logoEdisonCollege from "../../Img/logoEdisonCollege.png";
+import logoCambridge from "../../Img/logoCambridge.jpg";
 
 const windesheim = {
   logo: logoWindesheim,
@@ -11,7 +16,6 @@ const windesheim = {
   opleiding: "HBO-ICT",
   startDatum: new Date(2013, 8, 1),
   eindDatum: new Date(2017, 5, 30),
-  afronding: 8,
 };
 
 const edisoncollege = {
@@ -20,18 +24,53 @@ const edisoncollege = {
   plaats: "Apeldoorn",
   opleiding: "HAVO",
   startDatum: new Date(2006, 8, 1),
-  eindDatum: new Date(2013, 6, 1),
-  afronding: 8,
+  eindDatum: new Date(2013, 5, 30),
 };
 
-const Educatie = (props) => {
+const cambridge = {
+  logo: logoCambridge,
+  onderwijsInstelling: "Cambridge University",
+  plaats: "",
+  opleiding: "C2 (Proficiency)",
+  startDatum: new Date(2014, 8, 1),
+  eindDatum: new Date(2015, 5, 30),
+};
+const educatieArr = [windesheim, cambridge, edisoncollege];
+const Educatie = forwardRef((props, ref) => {
+  const [opened, setOpened] = useState(false);
+
+  const onOpenItemHandler = (e) => {
+    setOpened(true);
+  };
+
+  const onCloseItemHandler = (e) => {
+    setOpened(false);
+  };
   return (
-    <div className={styles["main-container"]}>
-      <h2 className={styles["heading-primary"]}>Educatie</h2>
-      <EducatieItem opleiding={windesheim} />
-      <EducatieItem opleiding={edisoncollege} />
+    <div
+      ref={ref}
+      onClick={!opened ? onOpenItemHandler : undefined}
+      className={styles["main-container"]}
+    >
+      <div className={styles["flex-container"]}>
+        <h2 className={styles["heading-primary"]}>Educatie</h2>
+        <span
+          title={!opened ? "Open ervaring" : "Sluit ervaring"}
+          onClick={opened ? onCloseItemHandler : undefined}
+        >
+          <IonIcon
+            className={styles["open-icon"]}
+            title="Open/Close item"
+            icon={!opened ? addOutline : removeOutline}
+          />
+        </span>
+      </div>
+      {opened &&
+        educatieArr.map((opleiding) => (
+          <EducatieItem opleiding={opleiding} key={opleiding.opleiding} />
+        ))}
     </div>
   );
-};
+});
 
 export default Educatie;

@@ -1,18 +1,24 @@
-import React from "react";
+import React, { useRef } from "react";
 
 import Container from "./Components/UI/Container";
-// import SideNav from "./Components/Nav/SideNav";
 import Header from "./Components/Header/Header";
-
-// import styles from "./App.module.css";
 import WerkErvaring from "./Components/WerkErvaring/WerkErvaring";
 import Educatie from "./Components/Educatie/Educatie";
 import SideNav from "./Components/Nav/SideNav";
 
 function App() {
+  const smooth = { behavior: "smooth" };
   const onNavClickHandler = (e) => {
-    console.log(e.target.getAttribute("data-name"));
+    const target = e.target.getAttribute("data-name");
+    if (target === "ervaring") {
+      ervaringRef.current.scrollIntoView(smooth);
+    }
+    if (target === "educatie") {
+      educatieRef.current.scrollIntoView(smooth);
+    }
   };
+  const ervaringRef = useRef();
+  const educatieRef = useRef();
 
   return (
     <>
@@ -21,10 +27,10 @@ function App() {
         <SideNav onClick={onNavClickHandler} />
       </Container>
       <Container>
-        <WerkErvaring />
+        <WerkErvaring ref={ervaringRef} />
       </Container>
       <Container>
-        <Educatie />
+        <Educatie ref={educatieRef} />
       </Container>
     </>
   );

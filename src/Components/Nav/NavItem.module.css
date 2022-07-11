@@ -12,3 +12,7 @@
 .nav-item:last-child {
   border-bottom: none;
 }
+
+.nav-item:hover {
+  cursor: pointer;
+}

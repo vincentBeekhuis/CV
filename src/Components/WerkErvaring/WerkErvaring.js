@@ -1,8 +1,10 @@
-import React from "react";
+import React, { forwardRef, useState } from "react";
 import styles from "./WerkErvaring.module.css";
 import WerkErvaringItem from "./WerkErvaringItem";
 import logoHSO from "../../Img/logoHSO.png";
 import logoThinkwise from "../../Img/logoThinkwise.png";
+import { IonIcon } from "@ionic/react";
+import { addOutline, removeOutline } from "ionicons/icons";
 
 const hso = {
   logo: logoHSO,
@@ -26,14 +28,38 @@ const thinkwise = {
     "Als Software Modernization Specialist bij Thinkwise zorgde ik ervoor dat prospects in de pre-sales fase een op maat gemaakte demo konden ervaren. Ik stuurde een team aan van gemiddeld 4 low-code developers. ",
 };
 
-const WerkErvaring = (props) => {
+const WerkErvaring = forwardRef((props, ref) => {
+  const [opened, setOpened] = useState(false);
+
+  const onOpenItemHandler = (e) => {
+    setOpened(true);
+  };
+  const onCloseItemHandler = (e) => {
+    setOpened(false);
+  };
   return (
-    <div className={styles["main-container"]}>
-      <h2 className={styles["heading-primary"]}>Ervaring</h2>
-      <WerkErvaringItem functie={hso} />
-      <WerkErvaringItem functie={thinkwise} />
+    <div
+      ref={ref}
+      onClick={!opened ? onOpenItemHandler : undefined}
+      className={styles["main-container"]}
+    >
+      <div className={styles["flex-container"]}>
+        <h2 className={styles["heading-primary"]}>Ervaring</h2>
+        <span
+          onClick={opened ? onCloseItemHandler : undefined}
+          title={!opened ? "Open ervaring" : "Sluit ervaring"}
+        >
+          <IonIcon
+            className={styles["open-icon"]}
+            title="Open/Close item"
+            icon={!opened ? addOutline : removeOutline}
+          />
+        </span>
+      </div>
+      {opened && <WerkErvaringItem functie={hso} />}
+      {opened && <WerkErvaringItem functie={thinkwise} />}
     </div>
   );
-};
+});
 
 export default WerkErvaring;

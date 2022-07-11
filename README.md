@@ -1,7 +1,14 @@
 # TODO
 
-- Blokjes met Ervaring / Educatie etc. openklapbaar maken en standaard dichtgeklapt
-- Side nav met auto scroll to view
+- Onderwerpen toevoegen:
+  - Contactgegevens in header (?)
+  - Introductie blok
+  - Skills
+    - JavaScript
+    - HTML
+    - CSS
+    - React
+    - SQL
 
 # Getting Started with Create React App
 
