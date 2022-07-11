@@ -1,9 +1,7 @@
 .container {
-  /* display: flex; */
   display: grid;
   grid-template-columns: 1fr 10fr;
   column-gap: 2rem;
-  /* align-items: center; */
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   padding: 1.5rem;
 }
@@ -46,7 +44,6 @@
   font-size: 1.4rem;
   font-weight: 400;
   line-height: 19px;
-  transition: all 2s;
   grid-column: 2;
 }
 .open-content {
