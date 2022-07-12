@@ -29,13 +29,13 @@ function App() {
   const onNavClickHandler = (e) => {
     const target = e.target.getAttribute("data-name");
     if (target === "ervaring") {
-      setWerkErvaringOpened(true);
+      setWerkErvaringOpened((prevState) => !prevState);
       setTimeout(() => {
         ervaringRef.current.scrollIntoView(smooth);
       }, 0);
     }
     if (target === "educatie") {
-      setEducatieOpened(true);
+      setEducatieOpened((prevState) => !prevState);
       setTimeout(() => {
         educatieRef.current.scrollIntoView(smooth);
       }, 0);
@@ -48,7 +48,11 @@ function App() {
     <>
       <Container>
         <Header />
-        <SideNav onClick={onNavClickHandler} />
+        <SideNav
+          onClick={onNavClickHandler}
+          ervaringOpened={werkErvaringOpened}
+          educatieOpened={educatieOpened}
+        />
       </Container>
       <Container>
         <WerkErvaring

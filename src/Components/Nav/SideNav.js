@@ -9,16 +9,16 @@ const SideNav = (props) => {
         {/* <button>X</button> */}
         <ul className={styles["side-nav"]}>
           <NavItem name="introductie" onClick={props.onClick}>
-            &gt; Introductie
+            + Introductie
           </NavItem>
           <NavItem name="ervaring" onClick={props.onClick}>
-            &gt; Werk Ervaring
+            {!props.ervaringOpened ? `+` : "-"} Werk Ervaring
           </NavItem>
           <NavItem name="educatie" onClick={props.onClick}>
-            &gt; Educatie
+            {!props.educatieOpened ? `+` : "-"} Educatie
           </NavItem>
           <NavItem name="skills" onClick={props.onClick}>
-            &gt; Skills
+            + Skills
           </NavItem>
         </ul>
       </div>

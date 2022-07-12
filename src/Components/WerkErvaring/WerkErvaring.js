@@ -13,8 +13,9 @@ const hso = {
   werkgever: "HSO",
   functieTitel: "BI Consultant",
   plaats: "Veenendaal",
-  functieOmschrijving:
-    "Als BI Consultant bij HSO begeleidde ik klanten in hun Data Journey. Ik zorgde er met mijn collega's voor dat klanten de waarde van hun data gingen inzien, om zo op basis van data bedrijfskritische keuzes te maken, in plaats van op gevoel. Ik zorgde ervoor dat data op de juiste manier werd ontsloten uit bronsystemen, maar ook dat het op de juiste manier aan de eindgebruikers werd getoond. De voornamelijkste skill die ik in deze functie heb geleerd: Wensen van de klant doorgronden en omzetten in duidelijke requirements. ",
+  functieOmschrijving: `Als BI Consultant bij HSO begeleidde ik klanten in hun Data Journey. Ik zorgde er met mijn collega's voor dat klanten de waarde van hun data gingen inzien, om zo op basis van data bedrijfskritische keuzes te maken, in plaats van op gevoel.
+  
+  Ik was van begin, tot het einde van projecten betrokken. Ik deed bijvoorbeeld de verkennende gesprekken met prospects om te kijken waar mogelijkheden zaten in hun data. Daarna verzorgde ik een uitgebreide analyse voor een goede inschatting van de hoeveelheid benodige uren. Technisch gezien zorgde ik ervoor dat data op de juiste manier werd ontsloten uit bronsystemen, maar bijvoorbeeld ook data de data kwaliteit van hoog niveau was. Ten slotte zorgde ik ervoor dat de data op de juiste manieren aan de eindgebruikers werd getoond. De voornamelijkste skill die ik in deze functie heb geleerd: Wensen van de klant doorgronden en omzetten in duidelijke requirements.`,
 };
 
 const thinkwise = {
