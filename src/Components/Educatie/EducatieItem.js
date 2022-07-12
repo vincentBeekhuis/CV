@@ -11,21 +11,21 @@ const EducatieItem = (props) => {
     opleiding,
   } = props.opleiding;
 
-  // const startDatumString = startDatum.toLocaleString("nl-NL", {
-  //   timeZone: "CET",
-  //   day: "numeric",
-  //   month: "short",
-  //   year: "numeric",
-  // });
-  // const eindDatumString =
-  //   eindDatum === "heden"
-  //     ? "heden"
-  //     : eindDatum.toLocaleString("nl-NL", {
-  //         timeZone: "CET",
-  //         day: "2-digit",
-  //         month: "short",
-  //         year: "numeric",
-  //       });
+  const startDatumString = startDatum.toLocaleString("nl-NL", {
+    timeZone: "CET",
+    day: "numeric",
+    month: "short",
+    year: "numeric",
+  });
+  const eindDatumString =
+    eindDatum === "heden"
+      ? "heden"
+      : eindDatum.toLocaleString("nl-NL", {
+          timeZone: "CET",
+          day: "2-digit",
+          month: "short",
+          year: "numeric",
+        });
 
   return (
     <div className={styles["container"]}>
@@ -38,7 +38,7 @@ const EducatieItem = (props) => {
         <h3 className={styles["heading-secondary"]}>{onderwijsInstelling}</h3>
         <p className={styles["heading-tertiary"]}>{opleiding}</p>
         <p className={styles["heading-quaternary"]}>
-          {`${props.startDatum} - ${props.eindDatum}`}
+          {`${startDatumString} - ${eindDatumString}`}
         </p>
         <p className={styles["heading-quaternary"]}>{plaats}</p>
       </div>

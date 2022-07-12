@@ -1,4 +1,4 @@
-import React, { forwardRef, useState } from "react";
+import React, { forwardRef } from "react";
 import { IonIcon } from "@ionic/react";
 import { addOutline, removeOutline } from "ionicons/icons";
 
@@ -37,26 +37,18 @@ const cambridge = {
 };
 const educatieArr = [windesheim, cambridge, edisoncollege];
 const Educatie = forwardRef((props, ref) => {
-  const [opened, setOpened] = useState(false);
-
-  const onOpenItemHandler = (e) => {
-    setOpened(true);
-  };
-
-  const onCloseItemHandler = (e) => {
-    setOpened(false);
-  };
+  const { opened, onOpenClick, onCloseClick } = props;
   return (
     <div
       ref={ref}
-      onClick={!opened ? onOpenItemHandler : undefined}
+      onClick={!opened ? onOpenClick : undefined}
       className={styles["main-container"]}
     >
       <div className={styles["flex-container"]}>
         <h2 className={styles["heading-primary"]}>Educatie</h2>
         <span
           title={!opened ? "Open ervaring" : "Sluit ervaring"}
-          onClick={opened ? onCloseItemHandler : undefined}
+          onClick={opened ? onCloseClick : undefined}
         >
           <IonIcon
             className={styles["open-icon"]}

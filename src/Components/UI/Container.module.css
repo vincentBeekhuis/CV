@@ -4,4 +4,17 @@
   background-color: #fff;
   border-radius: 11px;
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+@media (max-width: 1000px) {
+  .container {
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    max-width: 350px;
+  }
 }

@@ -17,14 +17,15 @@ const Header = (props) => {
       </div>
       <div className={styles["heading-information"]}>
         <div className={styles["heading-left"]}>
-          <div className={styles["image-background"]}>
-            <img
-              className={styles.image}
-              src={portretVincent}
-              alt="Portret of Vincent Beekhuis"
-            />
+          <div className={styles["heading-image"]}>
+            <div className={styles["image-background"]}>
+              <img
+                className={styles.image}
+                src={portretVincent}
+                alt="Portret of Vincent Beekhuis"
+              />
+            </div>
           </div>
-
           <h1 className={styles["heading-primary"]}>Vincent Beekhuis</h1>
           <p className={styles["heading-secondary"]}>
             Front-end Developer available for work

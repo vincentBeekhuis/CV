@@ -1,4 +1,4 @@
-import React, { forwardRef, useState } from "react";
+import React, { forwardRef } from "react";
 import styles from "./WerkErvaring.module.css";
 import WerkErvaringItem from "./WerkErvaringItem";
 import logoHSO from "../../Img/logoHSO.png";
@@ -29,24 +29,18 @@ const thinkwise = {
 };
 
 const WerkErvaring = forwardRef((props, ref) => {
-  const [opened, setOpened] = useState(false);
+  const { opened, onOpenClick, onCloseClick } = props;
 
-  const onOpenItemHandler = (e) => {
-    setOpened(true);
-  };
-  const onCloseItemHandler = (e) => {
-    setOpened(false);
-  };
   return (
     <div
       ref={ref}
-      onClick={!opened ? onOpenItemHandler : undefined}
+      onClick={!opened ? onOpenClick : undefined}
       className={styles["main-container"]}
     >
       <div className={styles["flex-container"]}>
         <h2 className={styles["heading-primary"]}>Ervaring</h2>
         <span
-          onClick={opened ? onCloseItemHandler : undefined}
+          onClick={opened ? onCloseClick : undefined}
           title={!opened ? "Open ervaring" : "Sluit ervaring"}
         >
           <IonIcon
