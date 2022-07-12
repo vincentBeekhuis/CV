@@ -36,8 +36,10 @@ const WerkErvaringItem = (props) => {
 
   return (
     <div className={styles["container"]}>
-      <img alt="bedrijfslogo" src={logo} className={styles["logo"]} />
-      <div>
+      <div className={styles["image-box"]}>
+        <img alt="bedrijfslogo" src={logo} className={styles["logo"]} />
+      </div>
+      <div className={styles["heading-box"]}>
         <h3 className={styles["heading-secondary"]}>{werkgever}</h3>
         <p className={styles["heading-tertiary"]}>{functieTitel}</p>
         <p className={styles["heading-quaternary"]}>

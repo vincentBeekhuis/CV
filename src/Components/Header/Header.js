@@ -2,7 +2,12 @@ import React from "react";
 import portretVincent from "../../Img/portretVincent.jfif";
 import mainHeaderImage from "../../Img/mainHeaderImage.jpg";
 import { IonIcon } from "@ionic/react";
-import { callOutline, mailOutline, pinOutline } from "ionicons/icons";
+import {
+  callOutline,
+  mailOutline,
+  pinOutline,
+  logoLinkedin,
+} from "ionicons/icons";
 
 import styles from "./Header.module.css";
 const Header = (props) => {
@@ -35,15 +40,34 @@ const Header = (props) => {
         <div className={styles["contacts"]}>
           <div className={styles["contacts-detail"]}>
             <IonIcon className={styles["contacts-icon"]} icon={callOutline} />
-            <span>06-52264443</span>
+            <span>
+              <a href="tel:06-52264443">06-52264443</a>
+            </span>
           </div>
           <div className={styles["contacts-detail"]}>
             <IonIcon className={styles["contacts-icon"]} icon={mailOutline} />
-            <span>v.beekhuis@hotmail.com</span>
+            <span>
+              <a href="mailto:v.beekhuis@hotmail.com">v.beekhuis@hotmail.com</a>
+            </span>
           </div>
           <div className={styles["contacts-detail"]}>
             <IonIcon className={styles["contacts-icon"]} icon={pinOutline} />
-            <span>Loseweg 75, 7315BD, Apeldoorn</span>
+            <span>
+              <a href="https://goo.gl/maps/Y2GMf2Y72VS69qp96" target="_blank">
+                Loseweg 75, 7315BD, Apeldoorn
+              </a>
+            </span>
+          </div>
+          <div className={styles["contacts-detail"]}>
+            <IonIcon className={styles["contacts-icon"]} icon={logoLinkedin} />
+            <span>
+              <a
+                href="https://www.linkedin.com/in/vincent-beekhuis-280526a8/"
+                target="_blank"
+              >
+                LinkedIn
+              </a>
+            </span>
           </div>
         </div>
       </div>
