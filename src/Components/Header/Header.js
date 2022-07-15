@@ -53,7 +53,11 @@ const Header = (props) => {
           <div className={styles["contacts-detail"]}>
             <IonIcon className={styles["contacts-icon"]} icon={pinOutline} />
             <span>
-              <a href="https://goo.gl/maps/Y2GMf2Y72VS69qp96" target="_blank">
+              <a
+                href="https://goo.gl/maps/Y2GMf2Y72VS69qp96"
+                target="_blank"
+                rel="noreferrer"
+              >
                 Loseweg 75, 7315BD, Apeldoorn
               </a>
             </span>
@@ -64,6 +68,7 @@ const Header = (props) => {
               <a
                 href="https://www.linkedin.com/in/vincent-beekhuis-280526a8/"
                 target="_blank"
+                rel="noreferrer"
               >
                 LinkedIn
               </a>

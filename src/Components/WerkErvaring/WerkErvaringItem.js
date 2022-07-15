@@ -9,7 +9,8 @@ const WerkErvaringItem = (props) => {
     werkgever,
     plaats,
     functieTitel,
-    functieOmschrijving,
+    functieOmschrijving1,
+    functieOmschrijving2,
   } = props.functie;
 
   const startDatumString = startDatum.toLocaleString("nl-NL", {
@@ -55,13 +56,15 @@ const WerkErvaringItem = (props) => {
           ""
         )}
       </div>
-      <div className={styles["content-box"]}>
-        {itemOpened ? (
-          <p className={styles["content"]}>{functieOmschrijving}</p>
-        ) : (
-          ""
-        )}
-      </div>
+      {itemOpened ? (
+        <div className={styles["content-box"]}>
+          <p className={styles["content"]}>{functieOmschrijving1}</p>
+          <br />
+          <p className={styles["content"]}>{functieOmschrijving2}</p>
+        </div>
+      ) : (
+        ""
+      )}
     </div>
   );
 };

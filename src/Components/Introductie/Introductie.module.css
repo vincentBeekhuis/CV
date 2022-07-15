@@ -1,6 +1,6 @@
 .main-container {
   padding: 2rem;
-  /* overflow: hidden; */
+  width: 65.083333333333365rem;
 }
 
 .heading-primary {
@@ -19,4 +19,23 @@
   font-size: 3.2rem;
   pointer-events: none;
   color: rgba(0, 0, 0, 0.9);
+}
+
+.content {
+  font-size: 1.4rem;
+  line-height: 19px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+@media (max-width: 1000px) {
+  .main-container {
+    max-width: 60rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-container {
+    max-width: 35rem;
+  }
 }

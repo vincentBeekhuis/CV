@@ -1,14 +1,8 @@
 # TODO
 
-- Onderwerpen toevoegen:
-  - Contactgegevens in header (?)
-  - Introductie blok
-  - Skills
-    - JavaScript
-    - HTML
-    - CSS
-    - React
-    - SQL
+- Honours Programme toevoegen als educatie
+- Text HSO
+- Text Thinkwise
 
 # Getting Started with Create React App
 

@@ -1,0 +1,21 @@
+.flex-container {
+  margin: 0 auto;
+  max-width: 100rem;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.opened {
+  align-items: stretch;
+}
+
+.closed {
+  align-items: flex-start;
+}
+
+@media (max-width: 1000px) {
+  .flex-container {
+    flex-direction: column;
+    gap: 0;
+  }
+}

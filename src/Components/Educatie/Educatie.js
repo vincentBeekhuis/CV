@@ -1,4 +1,4 @@
-import React, { forwardRef } from "react";
+import React from "react";
 import { IonIcon } from "@ionic/react";
 import { addOutline, removeOutline } from "ionicons/icons";
 
@@ -8,6 +8,7 @@ import EducatieItem from "./EducatieItem";
 import logoWindesheim from "../../Img/logoWindesheim.png";
 import logoEdisonCollege from "../../Img/logoEdisonCollege.png";
 import logoCambridge from "../../Img/logoCambridge.jpg";
+import logoHonours from "../../Img/logoHonours.jpg";
 
 const windesheim = {
   logo: logoWindesheim,
@@ -35,12 +36,21 @@ const cambridge = {
   startDatum: new Date(2014, 8, 1),
   eindDatum: new Date(2015, 5, 30),
 };
-const educatieArr = [windesheim, cambridge, edisoncollege];
-const Educatie = forwardRef((props, ref) => {
+
+const honours = {
+  logo: logoHonours,
+  onderwijsInstelling: "Honours Programme",
+  plaats: "Zwolle",
+  opleiding: "Intergenerational Collaboration",
+  startDatum: new Date(2014, 8, 1),
+  eindDatum: new Date(2015, 5, 30),
+};
+
+const educatieArr = [windesheim, honours, cambridge, edisoncollege];
+const Educatie = (props) => {
   const { opened, onOpenClick, onCloseClick } = props;
   return (
     <div
-      ref={ref}
       onClick={!opened ? onOpenClick : undefined}
       className={styles["main-container"]}
     >
@@ -63,6 +73,6 @@ const Educatie = forwardRef((props, ref) => {
         ))}
     </div>
   );
-});
+};
 
 export default Educatie;
