@@ -47,7 +47,9 @@ const Header = (props) => {
           <div className={styles["contacts-detail"]}>
             <IonIcon className={styles["contacts-icon"]} icon={mailOutline} />
             <span>
-              <a href="mailto:v.beekhuis@hotmail.com">v.beekhuis@hotmail.com</a>
+              <a href="mailto:mail@vincentbeekhuis.nl">
+                mail@vincentbeekhuis.nl
+              </a>
             </span>
           </div>
           <div className={styles["contacts-detail"]}>
