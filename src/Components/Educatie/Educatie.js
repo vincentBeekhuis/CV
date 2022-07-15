@@ -7,7 +7,7 @@ import EducatieItem from "./EducatieItem";
 
 import logoWindesheim from "../../Img/logoWindesheim.png";
 import logoEdisonCollege from "../../Img/logoEdisonCollege.png";
-import logoCambridge from "../../Img/logoCambridge.jpg";
+import logoCambridge from "../../Img/logoCambridge.webp";
 import logoHonours from "../../Img/logoHonours.jpg";
 
 const windesheim = {

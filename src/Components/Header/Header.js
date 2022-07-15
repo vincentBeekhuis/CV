@@ -1,6 +1,6 @@
 import React from "react";
-import portretVincent from "../../Img/portretVincent.jfif";
-import mainHeaderImage from "../../Img/mainHeaderImage.jpg";
+import portretVincent from "../../Img/portretVincent4.webp";
+import mainHeaderImage from "../../Img/mainHeaderImage.webp";
 import { IonIcon } from "@ionic/react";
 import {
   callOutline,
