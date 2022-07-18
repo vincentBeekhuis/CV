@@ -27,7 +27,7 @@ const softSkills = [
 ];
 
 const listSkills = (skillArr) => {
-  return skillArr.map((skill) => <li>{skill}</li>);
+  return skillArr.map((skill) => <li key={skill}>{skill}</li>);
 };
 
 const Skills = (props) => {
