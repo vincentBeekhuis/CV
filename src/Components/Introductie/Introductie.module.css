@@ -1,24 +1,5 @@
 .main-container {
-  padding: 2rem;
   width: 65.083333333333365rem;
-}
-
-.heading-primary {
-  font-size: 2rem;
-  font-weight: 600;
-  line-height: 25px;
-  color: rgba(0, 0, 0, 0.9);
-}
-
-.flex-container {
-  display: flex;
-  justify-content: space-between;
-}
-
-.open-icon {
-  font-size: 3.2rem;
-  pointer-events: none;
-  color: rgba(0, 0, 0, 0.9);
 }
 
 .content {

@@ -1,10 +1,21 @@
 .main-container {
   padding: 2rem;
+  position: relative;
 }
+
+.clickable-container {
+  position: absolute;
+  width: 150%;
+  height: 7.5rem;
+  top: -2rem;
+  left: -2rem;
+}
+
 .flex-container {
   display: flex;
   justify-content: space-between;
 }
+
 .heading-primary {
   font-size: 2rem;
   font-weight: 600;
@@ -15,5 +26,12 @@
 .open-icon {
   font-size: 3.2rem;
   pointer-events: none;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.content {
+  font-size: 1.4rem;
+  line-height: 19px;
+  font-weight: 400;
   color: rgba(0, 0, 0, 0.9);
 }

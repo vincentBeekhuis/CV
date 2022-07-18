@@ -6,11 +6,11 @@
 }
 
 .opened {
-  align-items: stretch;
+  align-items: baseline;
 }
 
 .closed {
-  align-items: flex-start;
+  align-items: baseline;
 }
 
 @media (max-width: 1000px) {

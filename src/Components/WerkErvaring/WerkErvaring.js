@@ -1,10 +1,12 @@
 import React from "react";
-import styles from "./WerkErvaring.module.css";
 import WerkErvaringItem from "./WerkErvaringItem";
-import logoHSO from "../../Img/logoHSO.png";
-import logoThinkwise from "../../Img/logoThinkwise.png";
 import { IonIcon } from "@ionic/react";
 import { addOutline, removeOutline } from "ionicons/icons";
+
+import logoHSO from "../../Img/logoHSO.png";
+import logoThinkwise from "../../Img/logoThinkwise.png";
+
+import "./../../Styles/general.css";
 
 const hso = {
   logo: logoHSO,
@@ -30,29 +32,30 @@ const thinkwise = {
     "Tijdens de analysefase zorgde ik ervoor dat we zoveel mogelijk te weten kwamen over de wensen van de klant en de requirements voor het deel van het ERP-systeem dat wij gingen maken. Ook maakte ik tijdens de analysefase een ontwerp van de applicatie en het bijbehorende datamodel. Tijdens de ontwikkelfase stuurde ik, naast het zelf ontwikkelen, een team aan van gemiddeld 4 low-code developers en controleerde het werk wat zij opleverden. De belangrijkste skill die ik in deze functie heb geleerd: Samenwerken met een team van developers aan één applicatie.",
 };
 
+const werkErvaringList = [hso, thinkwise];
+
 const WerkErvaring = (props) => {
-  const { opened, onOpenClick, onCloseClick } = props;
+  const { opened, onToggleClick } = props;
 
   return (
-    <div
-      onClick={!opened ? onOpenClick : undefined}
-      className={styles["main-container"]}
-    >
-      <div className={styles["flex-container"]}>
-        <h2 className={styles["heading-primary"]}>Ervaring</h2>
-        <span
-          onClick={opened ? onCloseClick : undefined}
-          title={!opened ? "Open ervaring" : "Sluit ervaring"}
-        >
-          <IonIcon
-            className={styles["open-icon"]}
-            title="Open/Close item"
-            icon={!opened ? addOutline : removeOutline}
-          />
-        </span>
+    <div className="main-container">
+      <div
+        className="clickable-container"
+        onClick={onToggleClick}
+        title={!opened ? "Open werkervaring" : "Sluit werkervaring"}
+      ></div>
+      <div className="flex-container">
+        <h2 className="heading-primary">Ervaring</h2>
+        <IonIcon
+          className="open-icon"
+          title="Open/Close item"
+          icon={!opened ? addOutline : removeOutline}
+        />
       </div>
-      {opened && <WerkErvaringItem functie={hso} />}
-      {opened && <WerkErvaringItem functie={thinkwise} />}
+      {opened &&
+        werkErvaringList.map((ervaring) => (
+          <WerkErvaringItem functie={ervaring} key={ervaring} />
+        ))}
     </div>
   );
 };

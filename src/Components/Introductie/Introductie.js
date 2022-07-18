@@ -1,28 +1,31 @@
 import React from "react";
-import styles from "./Introductie.module.css";
 import { IonIcon } from "@ionic/react";
 import { addOutline, removeOutline } from "ionicons/icons";
 
+import styles from "./Introductie.module.css";
+import "./../../Styles/general.css";
+
 const Introductie = (props) => {
-  const { opened, onOpenClick, onCloseClick } = props;
+  const { opened, onToggleClick } = props;
 
   return (
     <div
-      onClick={!opened ? onOpenClick : undefined}
-      className={`${styles["main-container"]} ${opened && styles["opened"]}`}
+      className={`${styles["main-container"]} ${
+        opened && styles["opened"]
+      } main-container`}
     >
-      <div className={styles["flex-container"]}>
-        <h2 className={styles["heading-primary"]}>Introductie</h2>
-        <span
-          title={!opened ? "Open introductie" : "Sluit introductie"}
-          onClick={opened ? onCloseClick : undefined}
-        >
-          <IonIcon
-            className={styles["open-icon"]}
-            title="Open/Close item"
-            icon={!opened ? addOutline : removeOutline}
-          />
-        </span>
+      <div
+        className="clickable-container"
+        onClick={onToggleClick}
+        title={!opened ? "Open introductie" : "Sluit introductie"}
+      ></div>
+      <div className="flex-container">
+        <h2 className="heading-primary">Introductie</h2>
+        <IonIcon
+          className="open-icon"
+          title="Open/Close item"
+          icon={!opened ? addOutline : removeOutline}
+        />
       </div>
       {opened && (
         <div className={styles["content"]}>

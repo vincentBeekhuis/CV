@@ -16,29 +16,20 @@ function App() {
   const [introductieOpened, setIntroductieOpened] = useState(true);
   const [skillsOpened, setSkillsOpened] = useState(true);
 
-  const onOpenWerkErvaringHandler = (e) => {
-    setWerkErvaringOpened(true);
+  const onToggleWerkErvaringHandler = (e) => {
+    setWerkErvaringOpened((prevState) => !prevState);
   };
-  const onCloseWerkErvaringHandler = (e) => {
-    setWerkErvaringOpened(false);
+
+  const onToggleEducatieHandler = (e) => {
+    setEducatieOpened((prevState) => !prevState);
   };
-  const onOpenEducatieHandler = (e) => {
-    setEducatieOpened(true);
+
+  const onToggleIntroductieHandler = (e) => {
+    setIntroductieOpened((prevState) => !prevState);
   };
-  const onCloseEducatieHandler = (e) => {
-    setEducatieOpened(false);
-  };
-  const onOpenIntroductieHandler = (e) => {
-    setIntroductieOpened(true);
-  };
-  const onCloseIntroductieHandler = (e) => {
-    setIntroductieOpened(false);
-  };
-  const onOpenSkillsHandler = (e) => {
-    setSkillsOpened(true);
-  };
-  const onCloseSkillsHandler = (e) => {
-    setSkillsOpened(false);
+
+  const onToggleSkillsHandler = (e) => {
+    setSkillsOpened((prevState) => !prevState);
   };
 
   return (
@@ -56,31 +47,24 @@ function App() {
         <Container className="left">
           <Introductie
             opened={introductieOpened}
-            onOpenClick={onOpenIntroductieHandler}
-            onCloseClick={onCloseIntroductieHandler}
+            onToggleClick={onToggleIntroductieHandler}
           />
         </Container>
         <Container className="right">
-          <Skills
-            opened={skillsOpened}
-            onOpenClick={onOpenSkillsHandler}
-            onCloseClick={onCloseSkillsHandler}
-          />
+          <Skills opened={skillsOpened} onToggleClick={onToggleSkillsHandler} />
         </Container>
       </div>
 
       <Container>
         <WerkErvaring
           opened={werkErvaringOpened}
-          onOpenClick={onOpenWerkErvaringHandler}
-          onCloseClick={onCloseWerkErvaringHandler}
+          onToggleClick={onToggleWerkErvaringHandler}
         />
       </Container>
       <Container>
         <Educatie
           opened={educatieOpened}
-          onOpenClick={onOpenEducatieHandler}
-          onCloseClick={onCloseEducatieHandler}
+          onToggleClick={onToggleEducatieHandler}
         />
       </Container>
     </>
